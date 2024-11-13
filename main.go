@@ -11,7 +11,7 @@ func main() {
 	fmt.Println("Starting vulnerable Go application...")
 
 	// Using jwt-go to create a token (vulnerable version)
-	token := jwt.New(jwt.SigningMethodHS256)
+	token := jwt.New(jwt.SigningMethodHS256
 	tokenString, err := token.SignedString([]byte("secret"))
 	if err != nil {
 		fmt.Println("Error creating token:", err)
